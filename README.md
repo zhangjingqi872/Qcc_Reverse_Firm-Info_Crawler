@@ -29,7 +29,7 @@
    - 脚本：`02_逆向 header 加密.py`
    - 公共模块：`qcc_search_helpers.py`
    - 早期样例输出：`qcc_api_result.json`（示例里曾出现 `search_keynos_count=0`）。
-   - ***属于失败的样本。*** 
+   - ***属于失败的样本。参考 GitHub 项目 [Jmiao11/Qichacha_Reverse_Crawler](https://github.com/Jmiao11/Qichacha_Reverse_Crawler)。*** 
 
 ---
 
