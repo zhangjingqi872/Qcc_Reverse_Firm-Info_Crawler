@@ -98,7 +98,7 @@
 在 `企查查公司抓取逆向爬虫` 目录执行：
 
 ```powershell
-& "C:/ProgramData/anaconda3/python.exe" "p:/25计设比赛/企查查公司抓取逆向爬虫/qcc_batch_brand_search.py"
+& "C:/ProgramData/anaconda3/python.exe" "p:/Qcc_Reverse_Firm-Info_Crawler/qcc_batch_brand_search.py"
 ```
 
 产物：`p:\25计设比赛\qcc_brand_qcc_top2.json`
@@ -110,13 +110,13 @@
 单条：
 
 ```powershell
-& "C:/ProgramData/anaconda3/python.exe" "p:/25计设比赛/企查查公司抓取逆向爬虫/qcc_firm_detail_apis.py" --keyno 57f1f9bdf8be4a9575357e5844268847 --save-html
+& "C:/ProgramData/anaconda3/python.exe" "p:/Qcc_Reverse_Firm-Info_Crawler/qcc_firm_detail_apis.py" --keyno 57f1f9bdf8be4a9575357e5844268847 --save-html
 ```
 
 批量（从精确筛选文件）：
 
 ```powershell
-& "C:/ProgramData/anaconda3/python.exe" "p:/25计设比赛/企查查公司抓取逆向爬虫/qcc_firm_detail_apis.py" --from-exact --save-html
+& "C:/ProgramData/anaconda3/python.exe" "p:/Qcc_Reverse_Firm-Info_Crawler/qcc_firm_detail_apis.py" --from-exact --save-html
 ```
 
 产物：`p:\25计设比赛\qcc_firm_detail_api_result.json`
