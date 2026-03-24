@@ -12,11 +12,13 @@
 1. **品牌名映射为工商主体**
    - 输入：`qcc_brand_to_company_map.json`
    - 作用：把品牌简称映射到企查查可检索的工商全称，并支持地址特例覆盖（如 `ECO互娱`）。
+   - ***这一条应该用不到。***
 
 2. **批量 searchMulti 检索**
    - 脚本：`qcc_batch_brand_search.py`
    - 输出：`qcc_brand_qcc_top2.json`
    - 作用：按每个公司名调用 `searchMulti`，保留 top2 候选结果（含 `KeyNo`）。
+   - ***批量检索非会员只能两页，这里默认你拿到精确的公司名称后取前两条搜索结果。*** 
 
 3. **按 KeyNo 抓 firm 详情页并解析基本信息**
    - 脚本：`qcc_firm_detail_apis.py`
@@ -27,6 +29,7 @@
    - 脚本：`02_逆向 header 加密.py`
    - 公共模块：`qcc_search_helpers.py`
    - 早期样例输出：`qcc_api_result.json`（示例里曾出现 `search_keynos_count=0`）。
+   - ***属于失败的样本。*** 
 
 ---
 
@@ -90,6 +93,7 @@
 编辑 `qcc_brand_to_company_map.json`：
 - `brand_to_legal_name`：品牌 -> 工商主体名
 - `address_overrides`：同品牌多主体时，按地址关键词覆盖
+- ***根据需求自行修改。***
 
 ---
 
@@ -101,7 +105,7 @@
 & "C:/ProgramData/anaconda3/python.exe" "p:/Qcc_Reverse_Firm-Info_Crawler/qcc_batch_brand_search.py"
 ```
 
-产物：`p:\25计设比赛\qcc_brand_qcc_top2.json`
+产物：`p:\Qcc_Reverse_Firm-Info_Crawler\qcc_brand_qcc_top2.json`
 
 ---
 
@@ -119,7 +123,7 @@
 & "C:/ProgramData/anaconda3/python.exe" "p:/Qcc_Reverse_Firm-Info_Crawler/qcc_firm_detail_apis.py" --from-exact --save-html
 ```
 
-产物：`p:\25计设比赛\qcc_firm_detail_api_result.json`
+产物：`p:\Qcc_Reverse_Firm-Info_Crawler\qcc_firm_detail_api_result.json`
 
 ---
 
